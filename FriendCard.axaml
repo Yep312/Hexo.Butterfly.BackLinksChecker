@@ -1,0 +1,30 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="Hexo.Butterfly.BackLinksChecker.FriendCard"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Border
+        Background="#9FE1FF"
+        CornerRadius="5"
+        Height="76"
+        Margin="5"
+        Name="Root"
+        Width="220">
+        <Grid>
+            <StackPanel Margin="5,3,0,0">
+                <SelectableTextBlock Name="Name" />
+                <SelectableTextBlock Name="Url" PointerPressed="Url_OnPointerPressed" />
+            </StackPanel>
+            <SelectableTextBlock
+                HorizontalAlignment="Right"
+                Margin="0,0,5,3"
+                Name="State"
+                Text="检测中"
+                VerticalAlignment="Bottom" />
+        </Grid>
+    </Border>
+</UserControl>

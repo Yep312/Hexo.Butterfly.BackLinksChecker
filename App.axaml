@@ -1,0 +1,29 @@
+<Application
+    RequestedThemeVariant="Default"
+    x:Class="Hexo.Butterfly.BackLinksChecker.App"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:suki="https://github.com/kikipoulet/SukiUI"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options.  -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <FontFamily x:Key="Font">avares://Hexo.Butterfly.BackLinksChecker#MiSans</FontFamily>
+        </ResourceDictionary>
+    </Application.Resources>
+
+    <Application.Styles>
+        <FluentTheme />
+        <suki:SukiTheme Locale="zh-CN" ThemeColor="Blue" />
+        <Styles>
+            <Style Selector="TextBlock">
+                <Setter Property="FontFamily" Value="{DynamicResource Font}" />
+            </Style>
+            <Style Selector="SelectableTextBlock">
+                <Setter Property="FontFamily" Value="{DynamicResource Font}" />
+            </Style>
+            <Style Selector="AccessText">
+                <Setter Property="FontFamily" Value="{DynamicResource Font}" />
+            </Style>
+        </Styles>
+    </Application.Styles>
+</Application>

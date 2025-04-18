@@ -1,0 +1,55 @@
+<suki:SukiWindow
+    Title="Hexo Butterfly 反链检测"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="Hexo.Butterfly.BackLinksChecker.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:suki="https://github.com/kikipoulet/SukiUI"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <suki:SukiWindow.Hosts>
+        <suki:SukiDialogHost Name="DialogHost" />
+    </suki:SukiWindow.Hosts>
+    <Border>
+        <DockPanel>
+            <DockPanel
+                Dock="Top"
+                Margin="10"
+                VerticalAlignment="Top">
+                <DockPanel Dock="Top">
+                    <Button
+                        Classes="Flat"
+                        Content="Fetch"
+                        DockPanel.Dock="Right"
+                        Name="RunButton" />
+                    <DockPanel Dock="Left">
+                        <UniformGrid
+                            Columns="2"
+                            DockPanel.Dock="Bottom"
+                            Height="34"
+                            Rows="1">
+                            <TextBox Name="LinkPageTextBox" Watermark="友情链接url (https://example.com/link)" />
+                            <TextBox Name="BackTextBox" Watermark="反链host (example.com)" />
+                        </UniformGrid>
+                    </DockPanel>
+                </DockPanel>
+                <TextBox DockPanel.Dock="Bottom" Name="PagesTextBox" />
+            </DockPanel>
+            <ScrollViewer>
+                <Grid Margin="10">
+                    <Border>
+                        <WrapPanel HorizontalAlignment="Center" Name="WrapPanel" />
+                    </Border>
+                    <suki:CircleProgressBar
+                        Height="128"
+                        IsIndeterminate="True"
+                        IsVisible="False"
+                        Name="CircleProgressBar"
+                        Width="128" />
+                </Grid>
+            </ScrollViewer>
+        </DockPanel>
+    </Border>
+</suki:SukiWindow>
