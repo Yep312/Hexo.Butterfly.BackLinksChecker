@@ -21,7 +21,7 @@ public class Methods
             };
             var client = new HttpClient(handler)
             {
-                Timeout = new TimeSpan(0, 0, 20)
+                Timeout = new TimeSpan(0, 0, 40)
             };
 
             var backlinkHost = await Dispatcher.UIThread.InvokeAsync(() => App.MainWindow.BackTextBox.Text);
@@ -41,14 +41,14 @@ public class Methods
             {
                 try
                 {
-                    for (int i = 20; i > 0; i--)
+                    for (int i = 40; i > 0; i--)
                     {
                         if (cts.Token.IsCancellationRequested)
                             break;
 
                         await Dispatcher.UIThread.InvokeAsync(() =>
                         {
-                            card.State.Text = $"检查中... {i}秒";
+                            card.State.Text = $"检查中 {i}秒";
                         });
                         await Task.Delay(1000, cts.Token);
                     }
