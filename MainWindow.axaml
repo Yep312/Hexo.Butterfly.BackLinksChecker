@@ -30,8 +30,14 @@
                             DockPanel.Dock="Bottom"
                             Height="34"
                             Rows="1">
-                            <TextBox Name="LinkPageTextBox" Watermark="友情链接url (https://example.com/link)" />
-                            <TextBox Name="BackTextBox" Watermark="反链host (example.com)" />
+                            <TextBox
+                                Name="LinkPageTextBox"
+                                Text="https://blog.yep.vin/page/link/"
+                                Watermark="友情链接url (https://example.com/link)" />
+                            <TextBox
+                                Name="BackTextBox"
+                                Text="yep.vin"
+                                Watermark="反链host (example.com)" />
                         </UniformGrid>
                     </DockPanel>
                 </DockPanel>

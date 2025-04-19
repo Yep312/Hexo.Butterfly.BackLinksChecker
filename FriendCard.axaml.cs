@@ -20,6 +20,8 @@ public partial class FriendCard : UserControl
         InitializeComponent();
         Name.Text = name;
         Url.Text = url;
+        Hyperlink.Content = url;
+        Hyperlink.NavigateUri = new Uri(url);
         State.Text = "等待检查";
     }
 

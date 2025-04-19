@@ -17,7 +17,11 @@
         <Grid>
             <StackPanel Margin="5,3,0,0">
                 <SelectableTextBlock Name="Name" />
-                <SelectableTextBlock Name="Url" PointerPressed="Url_OnPointerPressed" />
+                <SelectableTextBlock
+                    IsVisible="False"
+                    Name="Url"
+                    PointerPressed="Url_OnPointerPressed" />
+                <HyperlinkButton Name="Hyperlink" />
             </StackPanel>
             <SelectableTextBlock
                 HorizontalAlignment="Right"
